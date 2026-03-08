@@ -1,4 +1,5 @@
 .register{
+    min-height: 100vh;
     .card{
         border: 1px solid #253257;
         border-radius: 20px;
@@ -16,7 +17,7 @@
         object-fit: cover;
         border-radius: 50%;
         position: absolute;
-        top: 35.5%;
+        top: 39%;
         right: 20px;
     }
     input{
@@ -30,7 +31,7 @@
     
     .check {
         font-size: 17px;
-        height: 20px;
+        height: 10px;
         margin-left: 10px;
     }
     
@@ -65,7 +66,7 @@
     transition: .3s;
     border-radius: 15px;
     padding: 15px;
-    font-size: 18px;
+    /* font-size: 18px; */
     &:hover{
         border: 1px solid #253257;
         background-color: white;
@@ -92,4 +93,33 @@
     80%{
         transform: translateX(10px);    
 }
+}
+
+@media (max-width:765px) {
+    .register{
+        label {
+            font-size: 16px;
+        }
+        input{
+        border: 1px solid #2532577c;
+        border-radius: 15px;
+        padding: 10px;
+    }
+           #imagePreview {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 38.5%;
+            right: 7px;
+        }
+        .check {
+        font-size: 14px;
+        height: 10px;
+        margin-left: 10px;
+    }
+
+}
+
 }
