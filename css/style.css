@@ -1,0 +1,95 @@
+.register{
+    .card{
+        border: 1px solid #253257;
+        border-radius: 20px;
+    }
+    h3{
+        color: #253257;
+    }
+    .image {
+        position: relative;
+    }
+    
+    #imagePreview {
+        width: 57px;
+        height: 57px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 35.5%;
+        right: 20px;
+    }
+    input{
+        border: 1px solid #2532577c;
+        border-radius: 15px;
+    }
+    
+    label {
+        font-size: 23px;
+    }
+    
+    .check {
+        font-size: 17px;
+        height: 20px;
+        margin-left: 10px;
+    }
+    
+}
+
+.login{
+    .card{
+        border: 1px solid #253257;
+        border-radius: 20px;
+    }
+    h3{
+        color: #253257;
+    }
+    input{
+        border: 1px solid #2532577c;
+        border-radius: 15px;
+    }
+    
+    label {
+        font-size: 23px;
+    }
+    
+    .check {
+        font-size: 17px;
+        height: 20px;
+        margin-left: 10px;
+    }
+}
+.btn{
+    background-color: #253257;
+    color: white;
+    transition: .3s;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 18px;
+    &:hover{
+        border: 1px solid #253257;
+        background-color: white;
+        color: #253257;
+    }
+}
+
+
+@keyframes shake{
+    0%,
+    100%{
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%{
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+        transform: translateX(10px);    
+}
+}
