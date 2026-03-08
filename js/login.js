@@ -98,7 +98,7 @@ form.addEventListener("submit", (e) => {
     // true
     if(isValid){
         setTimeout(() => {
-            window.location.replace("exam.html");
+            window.location.replace("start.html");
         }, 1500);
     }
     
