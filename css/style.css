@@ -95,6 +95,95 @@
 }
 }
 
+/* Global variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --navy:       #1a2340;
+  --navy-mid:   #253257;
+  --amber:      #f5a623;
+  --amber-dark: #d4891a;
+  --green:      #2ecc71;
+  --red:        #e74c3c;
+  --white:      #f8f9fc;
+  --card-bg:    #ffffff;
+  --text-main:  #1a2340;
+  --text-muted: #6b7a99;
+  --border:     #dde3f0;
+  --radius:     10px;
+  --shadow:     0 4px 20px rgba(26, 35, 64, 0.10);
+  --transition: 0.22s ease;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: var(--white);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Start Page */
+.heading h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.heading h1 span {
+  color: var(--amber);
+}
+
+.start-quiz {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.start-quiz .form-floating label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.start-quiz .form-select,
+.start-quiz .form-control {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-family: 'Sora', sans-serif;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.start-quiz .form-select:focus,
+.start-quiz .form-control:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
+}
+
+.btn-start {
+  background: var(--navy-mid) !important;
+  border: none !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 0.75rem !important;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-start:hover {
+  background: var(--white) !important;
+  color: var(--mid-navy) !important;
+  transform: .3s;
+  border: 1px solid  var(--navy) !important;
 @media (max-width:765px) {
     .register{
         label {
@@ -122,4 +211,4 @@
 
 }
 
-}
+} }
