@@ -432,3 +432,207 @@ body {
   opacity: 0.35;
   cursor: not-allowed;
 }
+
+/* MARK BUTTON */
+.btn-mark {
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--amber);
+  background: transparent;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--amber-dark);
+  transition: all var(--transition);
+  margin-left: auto;
+}
+
+.btn-mark:hover,
+.btn-mark.marked {
+  background: var(--amber);
+  color: #fff;
+  border-color: var(--amber);
+}
+
+.btn-mark.marked::before { content: "★ "; }
+.btn-mark:not(.marked)::before { content: "☆ "; }
+
+/*  MARK SIDEBAR  */
+.mark-sidebar {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.mark-sidebar h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mark-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mark-list-item {
+  padding: 0.55rem 0.75rem;
+  background: rgba(245, 166, 35, 0.10);
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--amber-dark);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.mark-list-item:hover {
+  background: var(--amber);
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.mark-empty {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/*  Submit Bar  */
+.exam-footer {
+  background: var(--navy);
+  padding: 0.85rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 3rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 14px rgba(46, 204, 113, 0.35);
+}
+
+.btn-submit:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 204, 113, 0.45);
+}
+
+/* Result Page */
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  gap: 1.5rem;
+}
+
+.result-page .result-icon {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.result-page h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.result-page .result-name {
+  color: var(--amber);
+}
+
+.result-page .score-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.result-page .score-badge span {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.result-page p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 440px;
+}
+
+.result-page .btn-retry {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.7rem 2.5rem;
+  cursor: pointer;
+  border: 1px solid var(--navy);
+  transition: .3s;
+}
+
+.result-page .btn-retry:hover {
+  background: white;
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+#imagepreview{
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Timeout  */
+.result-page.timeout .result-icon { color: var(--red); }
+.result-page.timeout h2           { color: var(--red); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .exam-body {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .mark-sidebar {
+    position: static;
+  }
+
+  .timer-bar-track {
+    max-width: 140px;
+  }
+
+  .exam-topbar {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+}
