@@ -71,7 +71,7 @@ function showTimeoutPage() {
   const user        = JSON.parse(sessionStorage.getItem("userData") || "{}");
   const firstName   = localStorage.getItem("f_name") || "Student";
   const lastName    = localStorage.getItem("l_name") || "";
-  const savedImage  = localStorage.getItem("image") || "296fe121-5dfa-43f4-98b5-db50019738a7.jpg";
+  const savedImage  = localStorage.getItem("image") || "assites/296fe121-5dfa-43f4-98b5-db50019738a7.jpg";
 
   document.querySelector(".exam-page").innerHTML = `
     <div class="result-page timeout">
